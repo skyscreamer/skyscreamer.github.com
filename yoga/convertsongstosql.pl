@@ -16,14 +16,16 @@ while(<>) {
 	$band =~ s/'/''/g;
 	print "INSERT INTO Artist(id, name)  VALUES($bandcount, '$band')\n";
     }
-    unless ($albumid{$bandid{$band} . "_" . $album}) {
-	$albumid{$bandid{$band} . "_" . $album} = ++$albumcount;
+    $albumkey = $bandid{$band} . "_" . $album;
+    $albumkey =~ s/'//g;
+    unless ($albumid{$albumkey}) {
+	$albumid{$albumkey} = ++$albumcount;
 	$album =~ s/'/''/g;
 	print "INSERT INTO Album(id, title, artistId, year)  VALUES($albumcount, '$album', $bandid{$band}, 1974)\n";
     }
     ++$songcount;
     $song =~ s/'/''/g;
     print "INSERT INTO Song(id, title, artistId, albumId)  VALUES($songcount, '$song', $bandid{$band}, "
-	. $albumid{$bandid{$band} . "_" . $album} . ")\n";
+	. $albumid{$albumkey} . ")\n";
 
 }
