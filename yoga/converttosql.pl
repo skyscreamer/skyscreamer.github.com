@@ -88,3 +88,6 @@ for($i = 100 ; $i < $namecount; ++$i) {
 }
 
 close SQL;
+
+system "gzip loaddb.sql";
+
