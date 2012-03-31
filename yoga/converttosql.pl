@@ -76,7 +76,7 @@ for($i = 100 ; $i < $namecount; ++$i) {
     # Give everyone 5 faves
     for($j = 0; $j < 5; ++$j) {
         while($faves{$faveid}) {
-            $faveid = int(rand($bandcount - 100)) + 100;
+            $faveid = int(rand($bandcount - 100)) + 101;
         }
         $faves{$faveid} = 1;
     }
