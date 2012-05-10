@@ -40,13 +40,27 @@
     <h2>Performance</h2>
     <p>Nevado JMS uses REST calls to Amazon web services under the covers, so depends closely on network latency.
     Here are a set of informal tests that we're run to provide an idea of what's possible:</p>
+    <table class="perf_table">
+        <tr><th>Message Size (bytes)</th><th># of Threads</th><th>Send Rate (msg/sec)</th><th>Receive Rate (msg/sec)</th></tr>
+        <tr><td>1</td><td>1</td><td>34</td><td>23</td></tr>
+        <tr class="alt_row"><td>1</td><td>2</td><td>71</td><td>45</td></tr>
+        <tr><td>10k</td><td>1</td><td>23</td><td>20</td></tr>
+        <tr class="alt_row"><td>10k</td><td>2</td><td>48</td><td>42</td></tr>
+    </table>
+    <p>Nevado+SQS is comparable speed-wise to <a href="http://bhavin.directi.com/rabbitmq-vs-apache-activemq-vs-apache-qpid/">ActiveMQ
+        in persistent mode</a>, which is to say it's not breath-taking.  That said, this solution <u>scales
+        linearly</u>.  Add threads on your box until you max out your server resources.  Then add boxes.
+        You're not going to use this to build an algorithmic stock trading platform, but it is a good fit for applications
+        that need to scale traffic horizontally and indefinitely,.</p>
 </section>
 <section>
     <a name="compliance"></a>
     <h2>JMS Compliance</h2>
-    <p>Nevado JMS is not a 100% compliant solution,
+    <p>Nevado JMS is not 100% compliant,
         <b><a href="https://github.com/skyscreamer/nevado/wiki/Master-Feature-Grid">but it's close</a></b>.
-        Nevado creates a lot of this functionality itself, and hides the limitations of SQS where possible.</p>
+        Nevado creates a lot of JMS functionality itself, and hides the limitations of SQS where possible.
+        It was developed against version 1.1 of the specification, and we hope to update it to 2.0 when that becomes
+        final in 2013.</p>
 </section>
 <section>
     <a name="supported"></a>
