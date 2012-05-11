@@ -198,13 +198,38 @@ section {
             margin-bottom: 8px;
         }
 
+    .perf_table {
+        border: #30873E 2px solid;
+        width: 800px;
+    }
+
+    .perf_table th {
+        border: #30873E 1px solid;
+        padding: 3px;
+        spacing: 3px;
+        background-color: #30873E;
+        color: #FFFFFF;
+    }
+
+    .perf_table td {
+        border: #30873E 1px solid;
+        padding: 3px;
+        spacing: 3px;
+    }
+
+    .perf_table .alt_row td {
+        border: #30873E 1px solid;
+        padding: 3px;
+        spacing: 3px;
+        background-color: #7EC16A;
+    }
 
 
 
 /*		Tablet Layout: 768px.
-        Gutters: 24px.
-        Outer margins: 28px.
-        Inherits styles from: Default Layout.
+Gutters: 24px.
+Outer margins: 28px.
+Inherits styles from: Default Layout.
 -----------------------------------------------------------------
 cols    1     2      3      4      5      6      7      8
 px      68    160    252    344    436    528    620    712    */
