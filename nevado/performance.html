@@ -48,10 +48,9 @@
         <tr class="alt_row"><td>10k</td><td>2</td><td>48</td><td>42</td></tr>
     </table>
     <p>Nevado+SQS is comparable speed-wise to <a href="http://bhavin.directi.com/rabbitmq-vs-apache-activemq-vs-apache-qpid/">ActiveMQ
-        in persistent mode</a>, which is to say it's not breath-taking.  That said, this solution <u>scales
-        linearly</u>.  Add threads on your box until you max out your server resources.  Then add boxes.
-        You're not going to use this to build an algorithmic stock trading platform, but it is a good fit for applications
-        that need to scale traffic horizontally and indefinitely,.</p>
+        in persistent mode</a>, which is to say it's not breath-taking.  That said, the big advantage
+        with SQS is <u>this solution scales
+        linearly</u>.  Add threads and boxes and you can scale your messaging horizontally and indefinitely.</p>
 </section>
 <section>
     <a name="compliance"></a>
@@ -84,7 +83,7 @@
     <a name="unsupported"></a>
     <h2>Not Supported (yet)</h2>
     <ul>
-        <li>FIFO (SQS does not guarantee strict message order)</li>
+        <li>True FIFO (SQS does not guarantee strict message order)</li>
         <li>XA-compliance</li>
         <li>Expediting of high priority messages</li>
         <li>Message selectors</li>
@@ -99,10 +98,11 @@
     <p>SQS guarantees at-least-once delivery, whereas JMS requires once-and-only-once delivery.
         <a href="http://www.cloudstacking.com/?p=243">In practice, duplicate
         messages are very rare.</a>
-        You can send millions of messages and never see a duplicate.  That said, they are still a possibility and your
+        You can send millions of messages and never see a duplicate, but they are still a possibility and your
         code needs to be able to handle them.
         If this is a big issue for you, let us know.  This could be prevented with
-        some additional "magic" in Nevado, but this is an edge case, so we don't cover it yet.
+        some additional magic in Nevado, but it's an edge case and hard to reliably recreate for testing,
+        so it's not covered it yet.
     </p>
 </section>
 <section>
