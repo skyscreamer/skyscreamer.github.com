@@ -52,7 +52,7 @@ textarea {overflow: auto;}
 
 
 a{
-    color: #49E0EE;
+    color: #1CD;
 }
 
 /*		Default Layout: 992px.
@@ -137,7 +137,7 @@ section {
     }
     section blockquote,
     section pre {
-        background: #75E4EE;
+        background: #B2F1F7;
         border: 3px double #aaa;
         padding: 10px;
     }
@@ -200,6 +200,8 @@ section {
         section ul li {
             margin-bottom: 8px;
         }
+
+    .strikethrough { text-decoration: line-through; }
 
     .perf_table {
         border: #30873E 2px solid;
