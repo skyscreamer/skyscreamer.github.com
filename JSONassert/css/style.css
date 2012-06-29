@@ -52,7 +52,7 @@ textarea {overflow: auto;}
 
 
 a{
-    color: #30873E;
+    color: #49E0EE;
 }
 
 /*		Default Layout: 992px.
@@ -92,10 +92,13 @@ body {
             nav .intro {
                 background: #3a3a3a;
             }
-            nav .performance {
-                background: #7EC16A;
+            nav .cookbook {
+                background: #11CCDD;
             }
             nav .quickstart {
+                background: #757575;
+            }
+            nav .javadoc {
                 background: #757575;
             }
             nav .download {
@@ -110,7 +113,7 @@ body {
     header { }
         header h1 {
             clear: both;
-            color: #30873E;
+            color: #11CCDD;
             font-size: 43px;
             line-height: 60px;
         }
