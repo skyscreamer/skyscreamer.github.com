@@ -203,6 +203,8 @@ section {
 
     .strikethrough { text-decoration: line-through; }
 
+    .emphasize { font-weight: bold; }
+
     .perf_table {
         border: #30873E 2px solid;
         width: 800px;

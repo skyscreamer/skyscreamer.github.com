@@ -41,7 +41,7 @@
 
     <p><b>Write JSON unit tests in less code. Great for testing REST interfaces.</b></p>
 
-    <p>Write JSON tests as if you are comparing a string. Under the covers, JSONassert converts your string into a JSON object and compares the logical structure and data with the actual JSON. When strict is set to false (recommended), it forgives reordering data and extending results (as long as all the expected elements are there), making tests less brittle.</p>
+    <p>Code JSON tests as if you are comparing a string. Under the covers, JSONassert converts your string into a JSON object and compares the logical structure and data with the actual JSON. When strict is set to false (recommended), it forgives reordering data and extending results (as long as all the expected elements are there), making tests less brittle.</p>
 
     <p>Supported test frameworks:</p>
 
@@ -98,7 +98,7 @@
     <div class="example">
       <p>We tried to make error messages easy to understand. This is really important, since it gets hard for the eye to pick out the difference, particularly in long JSON strings. For example:</p>
         <blockquote>
-	  <a>String expected = "{id:1,name:\"Joe\",friends:[{id:2,name:\"Pat\",pets:[\"dog\"]},{id:3,name:\"Sue\",pets:[<b>\"bird\"</b>,\"fish\"]}],pets:[]}";</a><br/>
+	  <a>String expected = "{id:1,name:\"Joe\",friends:[{id:2,name:\"Pat\",pets:[\"dog\"]},{id:3,name:\"Sue\",pets:[<span class="emphasize">\"bird\"</span>,\"fish\"]}],pets:[]}";</a><br/>
 	  <a>String actual = "{id:1,name:\"Joe\",friends:[{id:2,name:\"Pat\",pets:[\"dog\"]},{id:3,name:\"Sue\",pets:[<b>\"cat\"</b>,\"fish\"]}],pets:[]}"</a><br/>
 	  <a>JSONAssert.assertEquals(expected, actual, false);</a><br/>
         </blockquote>
