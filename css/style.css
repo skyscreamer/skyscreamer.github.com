@@ -106,6 +106,10 @@ body {
             }
             nav .contrib {
                 background: #a6a6a6;
+		background-image:url('../i/blacktocat.png');
+		background-repeat:no-repeat;
+		background-position:center;
+		background-origin:content-box;
             }
         nav a.active {
             background: #f3444e;
