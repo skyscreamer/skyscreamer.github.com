@@ -52,7 +52,7 @@ textarea {overflow: auto;}
 
 
 a{
-    color: #1CD;
+    color: #950510;
 }
 
 /*		Default Layout: 992px.
@@ -92,17 +92,17 @@ body {
             nav .intro {
                 background: #3a3a3a;
             }
-            nav .cookbook {
+            nav .blog {
+                background-image:url('../i/red.png');
+            }
+            nav .yoga {
+                background: #004477;
+            }
+            nav .jsonassert {
                 background: #11CCDD;
             }
-            nav .quickstart {
-                background: #757575;
-            }
-            nav .javadoc {
-                background: #757575;
-            }
-            nav .download {
-                background: #929090;
+            nav .nevado {
+                background: #115511;
             }
             nav .contrib {
                 background: #a6a6a6;
@@ -113,20 +113,9 @@ body {
     header { }
         header h1 {
             clear: both;
-            color: #11CCDD;
+            color: #950510;
             font-size: 43px;
             line-height: 60px;
-	    float: left;
-	    width: 70%;
-        }
-        header h2 {
-            padding: 33px 0 0 0;
-            float: left;
-            text-align: right;
-            width: 30%;
-        }
-	header h2 a {
-	    color: #950510;
         }
         header ul li {
             float: left;
@@ -137,7 +126,7 @@ section {
     padding: 0 20px;
 }
     section h2 {
-        border-bottom:  2px solid #11CCDD;
+        border-bottom:  2px solid #950510;
         font-size: 20px;
         line-height: 21px;
         margin-bottom: 20px;
@@ -148,7 +137,7 @@ section {
     }
     section blockquote,
     section pre {
-        background: #B2F1F7;
+        background: #CA5F66;
         border: 3px double #aaa;
         padding: 10px;
     }
@@ -212,10 +201,6 @@ section {
             margin-bottom: 8px;
         }
 
-    .strikethrough { text-decoration: line-through; }
-
-    .emphasize { font-weight: bold; }
-
     .perf_table {
         border: #30873E 2px solid;
         width: 800px;
@@ -242,7 +227,19 @@ section {
         background-color: #7EC16A;
     }
 
+    .profile {
+    	     padding: 5px;
+	     float: left;
+	     clear: all;
+    }
 
+    .profile img {
+    	     padding: 0 10px;
+    }
+
+    .strikethrough { text-decoration: line-through; }
+
+    .emphasize { font-weight: bold; }
 
 /*		Tablet Layout: 768px.
 Gutters: 24px.
